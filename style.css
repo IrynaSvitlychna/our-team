@@ -3,13 +3,14 @@ body {
   color: #898f8f;
   font-family: "Raleway", sans-serif;
   font-weight: 500;
+  margin-bottom: 120px;
 }
 
 header {
   position: relative;
   padding-bottom: 4px;
   max-width: 450px;
-  margin: auto;
+  margin: 120px auto 40px;
 }
 
 header::after {
@@ -23,10 +24,20 @@ header::after {
   width: 30px;
 }
 
+h1 {
+  color: #ffcc00;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  margin-block: 15px 45px;
+}
+
 hr {
   border: none;
   background-color: #ffcc00;
   min-height: 1px;
+  min-width: 1px;
+  align-self: stretch;
 }
 
 figure {
@@ -35,13 +46,14 @@ figure {
   margin: 0;
   display: inline-flex;
   position: relative;
+  margin-bottom: 40px;
 }
 
 figure::before,
 figure::after {
   content: "";
   position: absolute;
-  inset: 100px -1px;
+  inset: 23.3% -1px;
   background-color: #fff;
 }
 
@@ -49,8 +61,29 @@ figure::after {
   rotate: 90deg;
 }
 
-img {
+figure > img {
   z-index: 1;
+  max-width: 70vw;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: #666;
+}
+
+h2 + hr {
+  height: 2px;
+  max-width: 100px;
+  margin-block: 30px;
+}
+
+h3 {
+  color: #666;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 400;
 }
 
 ul {
@@ -58,14 +91,56 @@ ul {
   margin: 0;
   padding: 0;
   display: inline-flex;
+  margin-block: 30px 50px;
+  gap: 5px;
 }
 
-h1 {
-  color: #ffcc00;
-  text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
+li {
+  transition: 500ms;
 }
+
+li:hover {
+  filter: brightness(0.5);
+}
+
+p {
+  color: #333;
+  font-size: 14px;
+  line-height: 24px;
+  max-width: 430px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
 span {
   text-transform: uppercase;
+}
+
+button {
+  width: 118px;
+  height: 24px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid #ffcc00;
+  background: none;
+  display: block;
+  margin: 25px auto;
+}
+
+@media (min-width: 1170px) {
+  main {
+    display: flex;
+    max-width: 1170px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+  }
+
+  main > hr {
+    margin: 0;
+  }
 }
